@@ -1,0 +1,34 @@
+@base <http://users.dcc.uchile.cl/~ahogan/foaf.ttl> .
+
+@prefix km: <http://users.dcc.uchile.cl/~ahogan/foaf.ttl#> . #Aqui debo poner mi pagina fuente)?
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix social: <http://users.dcc.uchile.cl/~ahogan/social.ttl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix wd: <http://www.wikidata.org/entity/>.
+@prefix dbr: <http://dbpedia.org/resource/>.
+
+<> a foaf:Document ;
+   dc:date "2023-11-10"^^xsd:date ;
+   dc:title "Ken's FOAF Profile"@en ;
+   foaf:primaryTopic <#km> ;
+   dc:creator <#km> .
+
+<#km> a foaf:Person ;
+   rdfs:label "Ken Miyake" ;
+   rdfs:comment "Student of the DCC"@es ;
+   foaf:name "Ken Miyake" ;
+   foaf:givenName "Ken" ;
+   foaf:familyName "Miyake" ;
+   foaf:age 26 ; # it would be better to put date of birth to not have to update every birthday, but hey :)
+   foaf:img <https://ucampus.uchile.cl/d/r/usuario/60/609ca18c7485fcaeba2754ae58dfb74b/perfil/d43bdd902d3d831593ea410238816d67.jpg> ;
+   foaf:homepage <https://github.com/KenMiyake> ;
+   foaf:knows  <http://users.dcc.uchile.cl/~almorale/foaf.tll#am> , <https://fabianvillena.cl/foaf.ttl#fv> , <http://users.dcc.uchile.cl/~goperez/perfil.ttl#gp> , <http://pjaramillo.cl/foaf.ttl#pj> , <http://users.dcc.uchile.cl/~ahogan/foaf.ttl#ah> ; 
+   foaf:interest dbr:Semantic_Web , dbr:Chess , dbr:Anime , dbr:Piano  , dbr:Drawing ; 
+   social:likesMovie dbr:Diving_Bell_and_the_Butterfly , dbr:Sharktopus ;
+   social:hasSpiritAnimal dbr:Wolf ;
+   social:hasFavouritePlatonicSolid dbr:Tetrahedron ;
+   foaf:myersBriggs "INFP" ;
+   foaf:nick "Miyaken" .
